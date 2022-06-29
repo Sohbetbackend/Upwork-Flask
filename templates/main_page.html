@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+<a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/back.png') }}" style="width: 50px; height: 50px;">
+</a>
+<br>
+<a href="{{ url_for('student_page') }}">
+	<input type="submit" value="Student" class="submit">
+</a>
+<a href="{{ url_for('teacher_page') }}">
+	<input type="submit" value="Teacher" class="submit">
+</a>
+{% endblock %}

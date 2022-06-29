@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>AIGLON BOOKING SYSTEM</title>
+       <link rel="stylesheet" href="{{url_for('static', filename='css/design.css')}}">
+       <link rel="icon" href="{{ url_for('static', filename='images/aiglon.png') }}">
+       {{ moment.include_moment() }}
+    </head>
+    <body>
+      <div class="navbar">
+        <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/aiglon.png') }}" alt=""></a>
+        <h1>AIGLON BOOKING SYSTEM</h1>
+      </div>
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <ul class=flashes>
+      {% for message in messages %}
+      <li align='center'>{{ message }}</li>
+      {% endfor %}
+      </ul>
+      {% endif %}
+      {% endwith %}
+       {%block contents%}
+       {%endblock%}
+    </body>
+</html>

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+
+
+
+<div class="video-div">
+	<video class="video-tag" muted autoplay controls>
+  		<source src="{{ url_for('static', filename='videos/test.mp4') }}">
+	</video>
+
+	<div class="video-text">
+		<h2> WELCOME </h2>
+	</div>
+</div>
+
+
+
+<a href="{{ url_for('main_page') }}">
+	<input type="submit" value="Booking" class="booking">
+</a>
+
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+{% for lessons in lesson %}
+<div class="lesson">
+  <h1>Name of lesson: {{ lessons.name_lesson }}</h1>
+  <h2>Teacher: {{ lessons.teacher.full_name }}</h2>
+  <h3>Duration: {{ lessons.duration }}</h3>
+  <h4>Date: {{ lessons.date }}</h4>
+  <a href="#"><input type="submit" value="Order" class="submit"></a>
+</div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block contents %}
+
+<a href="{{ url_for('lesson') }}"><input type="submit" value="Go to lessons" style="background-color:red; border-radius:5px; color:white; border: red;"></a>
+
+<form method='POST' action="" class="deliver">
+
+	<input name="name_lesson" placeholder="Name Lesson" type="text" class="text"><br>
+
+	<input name="duration" placeholder="Duration" type="text" class="text"><br>
+
+  <input name="date" placeholder="Date" type="text" class="text"><br>
+
+
+
+	<input type="submit" value="submit" class="submit">
+
+</form>
+
+{% endblock %}
